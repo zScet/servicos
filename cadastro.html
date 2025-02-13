@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+
+        /* Resetando o estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Fundo de página com imagem */
+body {
+    background-image: url('https://img.freepik.com/fotos-premium/linhas-coloridas-de-fundo-abstrato-em-um-fundo-rosa-renderizacao-em-3d_537132-964.jpg'); /* Substitua pela sua imagem de wallpaper */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Container central para o formulário */
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+/* Título do formulário */
+h2 {
+    text-align: center;
+    color: #add8e6;  /* Azul claro */
+    margin-bottom: 20px;
+}
+
+/* Estilo para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo para os campos de input */
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #add8e6;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Botão de envio */
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #add8e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #00f5fd; /* Azul mais claro no hover */
+}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="images/logo.png">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="#home">Inicio</a></li>
+            <li id="link1" class="link"><a href="#features">Sobre</a></li>
+            <li id="link2" class="link"><a href="#pricing">Contratar</a></li>
+            <li id="link3" class="link"><a href="#about">Oferecer</a></li>
+        </ul>
+        <button class="btn" onclick="irParaCadastro()">Cadastrar</button>
+        <button class="btn2" onclick="irParaLogin()">Login</button>
+    </nav>
+
+<div class="container"> 
+    <h2>Cadastro de Usuário</h2>
+    <form action="../src/cadastro.php" method="POST">
+        <input type="text" name="nome" placeholder="Nome" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="senha" placeholder="Senha" required><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
+
+</body>
+</html>
