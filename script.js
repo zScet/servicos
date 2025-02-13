@@ -35,3 +35,21 @@ link3.addEventListener('click', () => {
         function irParaLogin() {
             window.location.href = "login.html"; // Substitua pelo URL da sua página de login
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const questions = document.querySelectorAll('.question h4');
+            
+            questions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;  // A resposta está logo abaixo do título (h4)
+                    const icon = this.querySelector('.toggle-icon');
+        
+                    // Alterna a visibilidade da resposta
+                    answer.classList.toggle('show');
+                    
+                    // Gira o ícone
+                    icon.style.transform = answer.classList.contains('show') ? 'rotate(90deg)' : 'rotate(0deg)';
+                });
+            });
+        });
+        
